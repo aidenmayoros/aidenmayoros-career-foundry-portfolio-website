@@ -1,5 +1,9 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.5;
@@ -46,6 +50,7 @@ a:active {
 
 .background__secondary {
 	background-color: #312f2f;
+	color: #f2f2f2;
 }
 
 .button__primary {
@@ -122,5 +127,80 @@ a:active {
 	}
 	100% {
 		background-position: 0 0;
+	}
+}
+
+.page-header {
+	display: flex;
+	width: 100%;
+	padding: 20px;
+}
+
+.page-header__item {
+	flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+	flex-grow: 1;
+	text-align: right;
+}
+
+.navigation-list {
+	list-style-type: none;
+}
+
+.navigation-list li {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.profile {
+	max-width: 700px;
+	margin: 5% auto;
+}
+
+.profile__portrait {
+	float: left;
+	width: 250px;
+	margin-right: 40px;
+	border-radius: 50%;
+}
+
+.page-footer {
+	clear: both;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* start grid fallback */
+.grid__item {
+	display: inline-block;
+	width: 33%;
+}
+/* end grid fallback */
+
+.grid a {
+	color: #f2f2f2;
+}
+
+.grid a:hover {
+	color: #fc440f;
+}
+
+@supports (display: grid) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
+		margin: 0;
+		color: #f2f2f2;
+	}
+	.grid__item {
+		background-color: #312f2f;
+		width: auto;
+		min-height: auto;
+		margin: 0;
+		padding: 5%;
 	}
 }

@@ -12,28 +12,56 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
 			rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sono:wght@200&family=Titillium+Web:wght@300;400&display=swap"
+			rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
 		<title>Home Page</title>
 	</head>
 	<body>
-		<header>
-			<nav>
-				<img src="./images/logo-small.png" alt="aiden's logo" />
-				<ul role="menubar">
+		<header class="page-header background__primary">
+			<img
+				src="./images/logo-small.png"
+				alt="Aiden's logo"
+				class="page-header__item" />
+			<nav class="main-navigation page-header__item">
+				<ul role="menubar" class="navigation-list">
 					<li role="presentation">
-						<a href="index.html" role="menuitem">Home</a>
+						<a
+							href="./index.html"
+							role="menuitem"
+							class="navigation-list__item navigation-list__item--active"
+							>Home</a
+						>
 					</li>
 					<li role="presentation">
-						<a href="about.html" role="menuitem">About</a>
+						<a
+							href="./work.html"
+							role="menuitem"
+							class="navigation-list__item navigation-list__item--active"
+							>Work</a
+						>
 					</li>
 					<li role="presentation">
-						<a href="contact.html" role="menuitem">Contact</a>
+						<a href="./about.html" role="menuitem" class="navigation-list__item"
+							>About Me</a
+						>
+					</li>
+					<li role="presentation">
+						<a
+							href="./contact.html"
+							role="menuitem"
+							class="navigation-list__item"
+							>Contact</a
+						>
 					</li>
 				</ul>
 			</nav>
 		</header>
 		<div>
-			<h1>About Page</h1>
+			<h1>About Me Page</h1>
 			<table>
 				<thead>
 					<tr>
