@@ -5,30 +5,52 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="./images/favicon.ico" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
 		<title>Home Page</title>
 	</head>
 	<body>
 		<header>
-			<nav class="navBar">
-				<!-- Replace placeholder with a Logo -->
-				<img src="./images/logo-small.png" alt="logo" />
-				<div>
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
+			<nav>
+				<img src="./images/logo-small.png" alt="aiden's logo" />
+				<ul role="menubar">
+					<li role="presentation">
+						<a href="index.html" role="menuitem">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="about.html" role="menuitem">About</a>
+					</li>
+					<li role="presentation">
+						<a href="contact.html" role="menuitem">Contact</a>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<div>
 			<h1>Contact Page</h1>
+			<form action="" method="post" id="contact-form">
+				<label class="standard-label" for="contact-email">*Email: </label>
+				<input type="email" required id="contact-email" />
+
+				<label class="standard-label" for="contact-phone">Telephone: </label>
+				<input
+					type="tel"
+					pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+					id="contact-phone"
+					placeholder="(000)000-0000" />
+
+				<label class="standard-label" for="contact-message">*Message: </label>
+				<textarea required maxlength="240" id="contact-message"></textarea>
+				<button type="submit" value="Send message" class="button__primary">
+					Submit
+				</button>
+			</form>
 			<div>
 				Aiden Mayoros<br />
 				8930 N 70th Ave<br />
@@ -40,5 +62,6 @@
 				<a href="mailto:aiden.mayoros@gmail.com">Contact me</a>
 			</div>
 		</div>
+		<script src="js/tota11y.min.js"></script>
 	</body>
 </html>

@@ -5,30 +5,82 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="./images/favicon.ico" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
 		<title>Home Page</title>
 	</head>
 	<body>
 		<header>
-			<nav class="navBar">
-				<!-- Replace placeholder with a Logo -->
-				<img src="./images/logo-small.png" alt="logo" />
-				<div>
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
+			<nav>
+				<img src="./images/logo-small.png" alt="aiden's logo" />
+				<ul role="menubar">
+					<li role="presentation">
+						<a href="index.html" role="menuitem">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="about.html" role="menuitem">About</a>
+					</li>
+					<li role="presentation">
+						<a href="contact.html" role="menuitem">Contact</a>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<div>
 			<h1>About Page</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Skills</th>
+						<th>Years of Experience</th>
+						<th>Level of Expertise</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>HTML</td>
+						<td>5</td>
+						<td>Proficient</td>
+					</tr>
+					<tr>
+						<td>CSS</td>
+						<td>5</td>
+						<td>Proficient</td>
+					</tr>
+					<tr>
+						<td>JavaScript</td>
+						<td>4</td>
+						<td>Proficient</td>
+					</tr>
+					<tr>
+						<td>React.js</td>
+						<td>2</td>
+						<td>Competent</td>
+					</tr>
+					<tr>
+						<td>API</td>
+						<td>3</td>
+						<td>Competent</td>
+					</tr>
+					<tr>
+						<td>CSS Frameworks</td>
+						<td>2</td>
+						<td>Competent</td>
+					</tr>
+					<tr>
+						<td>Node.js</td>
+						<td>1</td>
+						<td>Competent</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
+		<script src="js/tota11y.min.js"></script>
 	</body>
 </html>

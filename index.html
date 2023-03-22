@@ -5,26 +5,40 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="./images/favicon.ico" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
 		<title>Home Page</title>
 	</head>
 	<body>
 		<header>
-			<nav class="navBar">
-				<!-- Replace placeholder with a Logo -->
-				<img src="./images/logo-small.png" alt="logo" />
-				<div>
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="about.html">About</a>
-						</li>
-						<li>
-							<a href="contact.html">Contact</a>
-						</li>
-					</ul>
-				</div>
+			<nav>
+				<img src="./images/logo-small.png" alt="aiden's logo" />
+				<ul role="menubar" class="navigation-list">
+					<li role="presentation">
+						<a
+							href="index.html"
+							role="menuitem"
+							class="navigation-list__item navigation-list__item--active"
+							>Home</a
+						>
+					</li>
+					<li role="presentation">
+						<a href="about.html" role="menuitem" class="navigation-list__item"
+							>About</a
+						>
+					</li>
+					<li role="presentation">
+						<a href="contact.html" role="menuitem" class="navigation-list__item"
+							>Contact</a
+						>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<div>
@@ -37,7 +51,8 @@
 				My name is Aiden Mayoros. I am a <span>web</span> developer from Arizona
 				USA.
 			</p>
-			<a href="#">Check out some of my code</a>
+			<p>Check out some of my code</p>
+			<button type="button" class="button__primary">here</button>
 		</div>
 		<footer>
 			<p>Find me on</p>
@@ -51,5 +66,6 @@
 			<!-- LinkedIn Logo -->
 			<img src="./images/834713_linkedin_icon.svg" alt="LinkedIn" width="30" />
 		</footer>
+		<script src="js/tota11y.min.js"></script>
 	</body>
 </html>
