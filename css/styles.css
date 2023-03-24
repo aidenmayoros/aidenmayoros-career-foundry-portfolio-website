@@ -340,71 +340,6 @@ div.topBotomBordersOut a:hover:after {
 	padding: 0;
 }
 
-/* Animate the sun image to change colors */
-
-@keyframes color-change {
-	0% {
-		fill: #edc655;
-	}
-	50% {
-		fill: #fcffad;
-	}
-	100% {
-		fill: #f76414;
-	}
-}
-/* Long way  */
-/* .sun {
-	animation-duration: 4s;
-	animation-name: color-change;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-timing-function: linear;
-} */
-
-/* Short way */
-.sun {
-	animation: 4s color-change infinite alternate linear;
-}
-
-/* Animate the cloud to move across */
-@keyframes cloud-move {
-	from {
-		transform: translate(0, 50px);
-	}
-	to {
-		transform: translate(200px, 50px);
-	}
-}
-
-/* Long way */
-/* .cloud-front {
-  animation-duration: 30s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-} */
-
-/* Short way */
-.cloud-front {
-	animation: 30s cloud-move infinite alternate linear;
-}
-
-/* Move small cloud across */
-@keyframes cloud-move-reverse {
-	from {
-		transform: translate(446px, 48px);
-	}
-	to {
-		transform: translate(100px, 48px);
-	}
-}
-
-.cloud-back {
-	animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
 /* Dad throwing kid SVG */
 .dad__and__kidSVG {
 	display: flex;
@@ -412,9 +347,13 @@ div.topBotomBordersOut a:hover:after {
 	margin: 1em;
 }
 
+#svg2 {
+	border-radius: 2%;
+}
+
 @keyframes child-up {
 	from {
-		transform: translate(0, 400px);
+		transform: translate(0, 440px);
 	}
 	to {
 		transform: translate(0, 0);
@@ -422,5 +361,120 @@ div.topBotomBordersOut a:hover:after {
 }
 
 .child-up-animation {
-	animation: 2s child-up infinite alternate linear;
+	animation: 1s child-up infinite alternate linear;
+}
+
+/* TV SVG animation */
+
+@keyframes color-change {
+	0% {
+		fill: #ff0000;
+	}
+	10% {
+		fill: #ff7300;
+	}
+	20% {
+		fill: #fffb00;
+	}
+	30% {
+		fill: #fffb00;
+	}
+	40% {
+		fill: #48ff00;
+	}
+	50% {
+		fill: #00ffd5;
+	}
+	60% {
+		fill: #002bff;
+	}
+	70% {
+		fill: #7a00ff;
+	}
+	80% {
+		fill: #ff0059;
+	}
+	90% {
+		fill: #ff0088;
+	}
+	100% {
+		fill: #ff0000;
+	}
+}
+
+.tv-animation {
+	animation: 15s color-change infinite alternate linear;
+}
+
+/* Contact Page */
+
+/* Hide Lables */
+.visually-hidden {
+	border-width: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	white-space: nowrap !important;
+	width: 1px !important;
+}
+
+#contact__main__content {
+	text-align: center;
+	background-color: #312f2f;
+	margin: 5% 30%;
+	padding: 1em;
+	color: #f2f2f2;
+	border-radius: 3%;
+}
+
+#contact__main__content a {
+	color: #f2f2f2;
+}
+
+#contact__main__content input,
+#contact__main__content form textarea {
+	border: 1px solid #f2f2f2;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #666;
+	padding: 4px 7px;
+	outline: 0;
+}
+
+.item-a {
+	grid-area: name;
+}
+.item-b {
+	grid-area: email;
+}
+.item-c {
+	grid-area: phone;
+}
+.item-d {
+	grid-area: txt;
+}
+
+.item-e {
+	grid-area: send;
+}
+
+#contact-form {
+	padding: 0.2em;
+	margin: 0.2em;
+	display: grid;
+	gap: 0.5em;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		'name name name name'
+		'email email phone phone'
+		'txt txt txt txt'
+		'send send send send';
+}
+
+#contact__main__content form input,
+#contact__main__content form textarea {
+	width: 100%;
+	max-width: 100%;
 }

@@ -40,18 +40,30 @@
 		</div>
 	</header>
 
-	<div>
-		<h1>Contact Page</h1>
+	<div id="contact__main__content">
+		<h1>Contact Me</h1>
 		<form action="" method="post" id="contact-form">
-			<label class="standard-label" for="contact-email">*Email: </label>
-			<input type="email" required id="contact-email" />
+			<div class="item-a">
+				<label class="standard-label visually-hidden" for="contact-name">Name: </label>
+				<input type="text" id="contact-name" placeholder="Name" />
+			</div>
 
-			<label class="standard-label" for="contact-phone">Telephone: </label>
-			<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone" placeholder="(000)000-0000" />
+			<div class="item-b">
+				<label class="standard-label visually-hidden" for="contact-email">*Email: </label>
+				<input type="email" required id="contact-email" placeholder="Email" />
+			</div>
 
-			<label class="standard-label" for="contact-message">*Message: </label>
-			<textarea required maxlength="240" id="contact-message"></textarea>
-			<button type="submit" value="Send message" class="button__primary">
+			<div class="item-c">
+				<label class="standard-label visually-hidden" for="contact-phone">Telephone: </label>
+				<input type="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" id="contact-phone" placeholder="Phone Number" />
+			</div>
+
+			<div class="item-d">
+				<label class="standard-label visually-hidden" for="contact-message">*Message: </label>
+				<textarea rows="5" required maxlength="240" id="contact-message" placeholder="Message"></textarea>
+			</div>
+
+			<button type="submit" value="Send message" class="button__primary item-e" id="form__submit__button">
 				Submit
 			</button>
 		</form>
