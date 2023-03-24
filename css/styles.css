@@ -33,12 +33,6 @@ a:visited {
 	color: black;
 }
 
-a:hover,
-a:focus {
-	text-decoration: underline;
-	color: #fc440f;
-}
-
 a:active {
 	color: #312f2f;
 	font-weight: bold;
@@ -54,8 +48,9 @@ a:active {
 }
 
 .button__primary {
-	width: 220px;
-	height: 50px;
+	display: inline-block;
+	padding: 15px;
+	min-width: 100px;
 	border: none;
 	outline: none;
 	color: #fff;
@@ -65,6 +60,15 @@ a:active {
 	z-index: 0;
 	border-radius: 10px;
 	text-transform: capitalize;
+	text-align: center;
+}
+
+a:hover.button__primary {
+	text-decoration: none;
+}
+
+a:visited.button__primary {
+	color: #f2f2f2;
 }
 
 .button__primary:before {
@@ -133,26 +137,64 @@ a:active {
 
 .page-header {
 	display: flex;
+	justify-content: space-between;
 	width: 100%;
 	padding: 20px;
 }
 
-.page-header__item {
-	flex: 0 1 200px;
+/* Nav bar */
+
+/* Top and Bottom borders come in */
+div.container a {
+	text-decoration: none;
+	margin: 0px 10px;
+	padding: 10px 10px;
+	position: relative;
+	cursor: pointer;
 }
 
-.page-header__item:last-child {
-	flex-grow: 1;
-	text-align: right;
+/* Top and Bottom borders go out */
+div.topBotomBordersOut a:before,
+div.topBotomBordersOut a:after {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 2px;
+	background: #000000;
+	content: '';
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before {
+	top: 0px;
+	transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after {
+	bottom: 0px;
+	transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before,
+div.topBotomBordersOut a:hover:after {
+	opacity: 1;
+	transform: translateY(0px);
 }
 
 .navigation-list {
 	list-style-type: none;
+	display: flex;
+	flex-direction: row;
 }
 
 .navigation-list li {
 	display: inline-block;
 	margin-left: 15px;
+}
+
+.nav__logo {
+	width: 250px;
 }
 
 .profile {
@@ -174,10 +216,17 @@ a:active {
 	align-items: center;
 }
 
+/* Work Page */
+
 /* start grid fallback */
+.work-page-main-content h1 {
+	text-align: center;
+}
+
 .grid__item {
 	display: inline-block;
 	width: 33%;
+	border-radius: 5%;
 }
 /* end grid fallback */
 
@@ -196,6 +245,7 @@ a:active {
 		grid-gap: 20px;
 		margin: 0;
 		color: #f2f2f2;
+		margin: 1em;
 	}
 	.grid__item {
 		background-color: #312f2f;
@@ -203,5 +253,174 @@ a:active {
 		min-height: auto;
 		margin: 0;
 		padding: 5%;
+		border-radius: 5%;
 	}
+}
+
+/* Small screens */
+
+@media all and (max-width: 550px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.navigation-list {
+		font-size: 12px;
+	}
+
+	.navigation-list li {
+		margin: 0.5em;
+	}
+
+	div.container a {
+		padding: 0;
+		margin: 0;
+	}
+}
+@media all and (min-width: 550px) and (max-width: 750px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media all and (max-width: 750px) {
+	.profile {
+		max-width: 700px;
+		margin: 5% auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 1em;
+	}
+
+	.profile__portrait {
+		width: 50%;
+		margin-right: 0;
+	}
+
+	.grid {
+		grid-gap: 10px;
+		justify-items: center;
+	}
+
+	.grid__item {
+		width: 80%;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	.page-header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navigation-list {
+		padding: 0;
+	}
+
+	.nav__logo {
+		width: 50%;
+	}
+}
+
+/* About Page */
+.about__main__section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.about__main__section ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+/* Animate the sun image to change colors */
+
+@keyframes color-change {
+	0% {
+		fill: #edc655;
+	}
+	50% {
+		fill: #fcffad;
+	}
+	100% {
+		fill: #f76414;
+	}
+}
+/* Long way  */
+/* .sun {
+	animation-duration: 4s;
+	animation-name: color-change;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+} */
+
+/* Short way */
+.sun {
+	animation: 4s color-change infinite alternate linear;
+}
+
+/* Animate the cloud to move across */
+@keyframes cloud-move {
+	from {
+		transform: translate(0, 50px);
+	}
+	to {
+		transform: translate(200px, 50px);
+	}
+}
+
+/* Long way */
+/* .cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+} */
+
+/* Short way */
+.cloud-front {
+	animation: 30s cloud-move infinite alternate linear;
+}
+
+/* Move small cloud across */
+@keyframes cloud-move-reverse {
+	from {
+		transform: translate(446px, 48px);
+	}
+	to {
+		transform: translate(100px, 48px);
+	}
+}
+
+.cloud-back {
+	animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Dad throwing kid SVG */
+.dad__and__kidSVG {
+	display: flex;
+	justify-content: center;
+	margin: 1em;
+}
+
+@keyframes child-up {
+	from {
+		transform: translate(0, 400px);
+	}
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+.child-up-animation {
+	animation: 2s child-up infinite alternate linear;
 }
