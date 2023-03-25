@@ -257,75 +257,6 @@ div.topBotomBordersOut a:hover:after {
 	}
 }
 
-/* Small screens */
-
-@media all and (max-width: 550px) {
-	.grid {
-		grid-template-columns: 1fr;
-	}
-	.navigation-list {
-		font-size: 12px;
-	}
-
-	.navigation-list li {
-		margin: 0.5em;
-	}
-
-	div.container a {
-		padding: 0;
-		margin: 0;
-	}
-}
-@media all and (min-width: 550px) and (max-width: 750px) {
-	.grid {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-@media all and (max-width: 750px) {
-	.profile {
-		max-width: 700px;
-		margin: 5% auto;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		padding: 1em;
-	}
-
-	.profile__portrait {
-		width: 50%;
-		margin-right: 0;
-	}
-
-	.grid {
-		grid-gap: 10px;
-		justify-items: center;
-	}
-
-	.grid__item {
-		width: 80%;
-	}
-
-	h1 {
-		font-size: 22px;
-	}
-
-	.page-header {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.navigation-list {
-		padding: 0;
-	}
-
-	.nav__logo {
-		width: 50%;
-	}
-}
-
 /* About Page */
 .about__main__section {
 	display: flex;
@@ -423,7 +354,7 @@ div.topBotomBordersOut a:hover:after {
 #contact__main__content {
 	text-align: center;
 	background-color: #312f2f;
-	margin: 5% 30%;
+	margin: 5vw 30vw;
 	padding: 1em;
 	color: #f2f2f2;
 	border-radius: 3%;
@@ -477,4 +408,88 @@ div.topBotomBordersOut a:hover:after {
 #contact__main__content form textarea {
 	width: 100%;
 	max-width: 100%;
+}
+
+/* Small screens */
+
+@media all and (max-width: 550px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+	.navigation-list {
+		font-size: 12px;
+	}
+
+	.navigation-list li {
+		margin: 0.5em;
+	}
+
+	div.container a {
+		padding: 0;
+		margin: 0;
+	}
+
+	#contact-form {
+		grid-template-areas:
+			'name name name name'
+			'email email email email'
+			'phone phone phone phone'
+			'txt txt txt txt'
+			'send send send send';
+	}
+}
+
+@media all and (min-width: 550px) and (max-width: 750px) {
+	.grid {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.profile {
+		max-width: 700px;
+		margin: 5% auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 1em;
+	}
+
+	.profile__portrait {
+		width: 50%;
+		margin-right: 0;
+	}
+
+	.grid {
+		grid-gap: 10px;
+		justify-items: center;
+	}
+
+	.grid__item {
+		width: 80%;
+	}
+
+	h1 {
+		font-size: 22px;
+	}
+
+	.page-header {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.navigation-list {
+		padding: 0;
+	}
+
+	.nav__logo {
+		width: 50%;
+	}
+
+	#contact__main__content {
+		margin: 10vw;
+	}
 }
