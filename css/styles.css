@@ -135,14 +135,14 @@ a:visited.button__primary {
 	}
 }
 
-.page-header {
+/* Nav bar */
+
+.page-navbar {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	padding: 20px;
 }
-
-/* Nav bar */
 
 /* Top and Bottom borders come in */
 div.container a {
@@ -197,18 +197,6 @@ div.topBotomBordersOut a:hover:after {
 	width: 250px;
 }
 
-.profile {
-	max-width: 700px;
-	margin: 5% auto;
-}
-
-.profile__portrait {
-	float: left;
-	width: 250px;
-	margin-right: 40px;
-	border-radius: 50%;
-}
-
 .page-footer {
 	clear: both;
 	display: flex;
@@ -257,159 +245,6 @@ div.topBotomBordersOut a:hover:after {
 	}
 }
 
-/* About Page */
-.about__main__section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.about__main__section ul {
-	list-style-type: none;
-	text-align: center;
-	padding: 0;
-}
-
-/* Dad throwing kid SVG */
-.dad__and__kidSVG {
-	display: flex;
-	justify-content: center;
-	margin: 1em;
-}
-
-#svg2 {
-	border-radius: 2%;
-}
-
-@keyframes child-up {
-	from {
-		transform: translate(0, 440px);
-	}
-	to {
-		transform: translate(0, 0);
-	}
-}
-
-.child-up-animation {
-	animation: 1s child-up infinite alternate linear;
-}
-
-/* TV SVG animation */
-
-@keyframes color-change {
-	0% {
-		fill: #ff0000;
-	}
-	10% {
-		fill: #ff7300;
-	}
-	20% {
-		fill: #fffb00;
-	}
-	30% {
-		fill: #fffb00;
-	}
-	40% {
-		fill: #48ff00;
-	}
-	50% {
-		fill: #00ffd5;
-	}
-	60% {
-		fill: #002bff;
-	}
-	70% {
-		fill: #7a00ff;
-	}
-	80% {
-		fill: #ff0059;
-	}
-	90% {
-		fill: #ff0088;
-	}
-	100% {
-		fill: #ff0000;
-	}
-}
-
-.tv-animation {
-	animation: 15s color-change infinite alternate linear;
-}
-
-/* Contact Page */
-
-/* Hide Lables */
-.visually-hidden {
-	border-width: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important;
-	height: 1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	white-space: nowrap !important;
-	width: 1px !important;
-}
-
-#contact__main__content {
-	text-align: center;
-	background-color: #312f2f;
-	margin: 5vw 30vw;
-	padding: 1em;
-	color: #f2f2f2;
-	border-radius: 3%;
-}
-
-#contact__main__content a {
-	color: #f2f2f2;
-}
-
-#contact__main__content input,
-#contact__main__content form textarea {
-	border: 1px solid #f2f2f2;
-	border-radius: 10px;
-	box-shadow: 2px 2px 3px #666;
-	padding: 4px 7px;
-	outline: 0;
-}
-
-.item-a {
-	grid-area: name;
-}
-.item-b {
-	grid-area: email;
-}
-.item-c {
-	grid-area: phone;
-}
-.item-d {
-	grid-area: txt;
-}
-
-.item-e {
-	grid-area: send;
-}
-
-#contact-form {
-	padding: 0.2em;
-	margin: 0.2em;
-	display: grid;
-	gap: 0.5em;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	grid-template-areas:
-		'name name name name'
-		'email email phone phone'
-		'txt txt txt txt'
-		'send send send send';
-}
-
-#contact__main__content form input,
-#contact__main__content form textarea {
-	width: 100%;
-	max-width: 100%;
-}
-
 /* Small screens */
 
 @media all and (max-width: 550px) {
@@ -446,22 +281,6 @@ div.topBotomBordersOut a:hover:after {
 }
 
 @media all and (max-width: 750px) {
-	.profile {
-		max-width: 700px;
-		margin: 5% auto;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		padding: 1em;
-	}
-
-	.profile__portrait {
-		width: 50%;
-		margin-right: 0;
-	}
-
 	.grid {
 		grid-gap: 10px;
 		justify-items: center;
@@ -475,7 +294,7 @@ div.topBotomBordersOut a:hover:after {
 		font-size: 22px;
 	}
 
-	.page-header {
+	.page-navbar {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -487,9 +306,5 @@ div.topBotomBordersOut a:hover:after {
 
 	.nav__logo {
 		width: 50%;
-	}
-
-	#contact__main__content {
-		margin: 10vw;
 	}
 }

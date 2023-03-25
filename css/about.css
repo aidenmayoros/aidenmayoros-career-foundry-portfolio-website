@@ -1,0 +1,79 @@
+/* About Page */
+.about__main__section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.about__main__section ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+/* Dad throwing kid SVG */
+.dad__and__kidSVG {
+	display: flex;
+	justify-content: center;
+	margin: 1em;
+}
+
+#svg2 {
+	border-radius: 2%;
+}
+
+@keyframes child-up {
+	from {
+		transform: translate(0, 440px);
+	}
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+.child-up-animation {
+	animation: 1s child-up infinite alternate linear;
+}
+
+/* TV SVG animation */
+
+@keyframes color-change {
+	0% {
+		fill: #ff0000;
+	}
+	10% {
+		fill: #ff7300;
+	}
+	20% {
+		fill: #fffb00;
+	}
+	30% {
+		fill: #fffb00;
+	}
+	40% {
+		fill: #48ff00;
+	}
+	50% {
+		fill: #00ffd5;
+	}
+	60% {
+		fill: #002bff;
+	}
+	70% {
+		fill: #7a00ff;
+	}
+	80% {
+		fill: #ff0059;
+	}
+	90% {
+		fill: #ff0088;
+	}
+	100% {
+		fill: #ff0000;
+	}
+}
+
+.tv-animation {
+	animation: 15s color-change infinite alternate linear;
+}
