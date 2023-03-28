@@ -382,14 +382,14 @@ div.topBotomBordersOut a:hover:after {
 	}
 }
 
-@media all and (max-width: 550px) {
+@media all and (max-width: 500px) {
 	.grid {
 		-ms-grid-columns: 1fr;
 		grid-template-columns: 1fr;
 	}
 }
 
-@media all and (min-width: 550px) and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 750px) {
 	.grid {
 		-ms-grid-columns: 1fr 20px 1fr;
 		grid-template-columns: 1fr 1fr;
@@ -400,10 +400,6 @@ div.topBotomBordersOut a:hover:after {
 	.grid {
 		grid-gap: 10px;
 		justify-items: center;
-	}
-
-	.grid__item {
-		width: 80%;
 	}
 }
 
@@ -422,6 +418,7 @@ div.topBotomBordersOut a:hover:after {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	text-align: center;
 }
 
 .about__main__section ul {
@@ -551,6 +548,13 @@ div.topBotomBordersOut a:hover:after {
 	animation: 15s color-change infinite alternate linear;
 }
 
+@media all and (max-width: 550px) {
+	.about__main__section {
+		margin: 1em;
+		padding: 1em;
+	}
+}
+
 /* Contact Page */
 /* Hide Lables */
 .visually-hidden {
@@ -667,10 +671,13 @@ div.topBotomBordersOut a:hover:after {
 			'phone phone phone phone'
 			'txt txt txt txt'
 			'send send send send';
+		grid-template-columns: 1fr;
+		gap: 0.5em 0.1em;
 	}
 
 	#contact__main__content {
 		margin: 10vw;
+		padding: 0.2em;
 	}
 	.item-a {
 		-ms-grid-row: 1;
