@@ -568,12 +568,19 @@ div.topBotomBordersOut a:hover:after {
 	width: 1px !important;
 }
 
+.contact__main__body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 #contact__main__content {
 	text-align: center;
 	background-color: #41ead4;
-	margin: 5vw 30vw;
+	width: 30%;
 	padding: 1em;
 	border-radius: 10px;
+	margin-top: 1rem;
 }
 
 #contact__main__content a {
@@ -676,8 +683,9 @@ div.topBotomBordersOut a:hover:after {
 	}
 
 	#contact__main__content {
-		margin: 10vw;
 		padding: 0.2em;
+		width: 80%;
+		margin: 1rem;
 	}
 	.item-a {
 		-ms-grid-row: 1;
@@ -718,6 +726,12 @@ div.topBotomBordersOut a:hover:after {
 
 @media all and (min-width: 550px) and (max-width: 850px) {
 	#contact__main__content {
-		margin: 5vw 10vw;
+		width: 60%;
+	}
+}
+
+@media all and (min-width: 850px) and (max-width: 1250px) {
+	#contact__main__content {
+		width: 40%;
 	}
 }
