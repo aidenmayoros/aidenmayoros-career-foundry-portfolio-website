@@ -596,32 +596,42 @@ div.topBotomBordersOut a:hover:after {
 
 .item-a {
 	-ms-grid-row: 1;
+	grid-row: 1;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	-ms-grid-column-span: 7;
 	grid-area: name;
 }
 .item-b {
 	-ms-grid-row: 3;
+	grid-row: 3;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	-ms-grid-column-span: 3;
 	grid-area: email;
 }
 .item-c {
 	-ms-grid-row: 3;
+	grid-row: 3;
 	-ms-grid-column: 5;
+	grid-column: 5;
 	-ms-grid-column-span: 3;
 	grid-area: phone;
 }
 .item-d {
 	-ms-grid-row: 5;
+	grid-row: 5;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	-ms-grid-column-span: 7;
 	grid-area: txt;
 }
 
 .item-e {
 	-ms-grid-row: 7;
+	grid-row: 7;
 	-ms-grid-column: 1;
+	grid-column: 1;
 	-ms-grid-column-span: 7;
 	grid-area: send;
 }
@@ -664,27 +674,37 @@ div.topBotomBordersOut a:hover:after {
 	}
 	.item-a {
 		-ms-grid-row: 1;
+		grid-row: 1;
 		-ms-grid-column: 1;
+		grid-column: 1;
 		-ms-grid-column-span: 4;
 	}
 	.item-b {
 		-ms-grid-row: 2;
+		grid-row: 2;
 		-ms-grid-column: 1;
+		grid-column: 1;
 		-ms-grid-column-span: 4;
 	}
 	.item-c {
 		-ms-grid-row: 3;
+		grid-row: 3;
 		-ms-grid-column: 1;
+		grid-column: 1;
 		-ms-grid-column-span: 4;
 	}
 	.item-d {
 		-ms-grid-row: 4;
+		grid-row: 4;
 		-ms-grid-column: 1;
+		grid-column: 1;
 		-ms-grid-column-span: 4;
 	}
 	.item-e {
 		-ms-grid-row: 5;
+		grid-row: 5;
 		-ms-grid-column: 1;
+		grid-column: 1;
 		-ms-grid-column-span: 4;
 	}
 }

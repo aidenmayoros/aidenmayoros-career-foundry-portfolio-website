@@ -6,7 +6,7 @@
 	--off-white: #fdfffc;
 	--main-font: 'Titillium Web';
 	--main-border-radius: 10px;
-	--rgb-background-effect: linear-gradient(
+	--animated-rainbow-gradient: linear-gradient(
 		45deg,
 		#ff0000,
 		#ff7300,
@@ -96,7 +96,7 @@ a:visited.button__primary {
 
 .button__primary:before {
 	content: '';
-	background: var(--rgb-background-effect);
+	background: var(--animated-rainbow-gradient);
 	position: absolute;
 	top: -2px;
 	left: -2px;
